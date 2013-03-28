@@ -94,8 +94,8 @@ PS_INPUT VS( VS_INPUT input )
 	//output.lpos = mul( output.Pos, mul(View,lightViewProj)  );
 	//output.lpos = mul( output.Pos, lightViewProj );
 	//output.lpos = mul( mul(input.Pos, World), lightViewProj  );
-	output.wpos = input.Pos;
-	//output.wpos = mul( input.Pos, World );
+	//output.wpos = input.Pos;
+	output.wpos = mul( input.Pos, World );
 
 
     return output;
@@ -187,7 +187,7 @@ PS_INPUT ShadowMapVS( VS_INPUT input )
     output.Normal = mul( input.Normal, World );
     output.Tex    = input.Tex;
 	output.TexNum = input.TexNum;
-
+	//return input.Pos.z;
     return output;
 }
 
@@ -216,6 +216,6 @@ technique10 RenderShadowMap
     {
         SetVertexShader( CompileShader( vs_4_0, ShadowMapVS() ) );
         SetGeometryShader( NULL );
-        SetPixelShader( CompileShader( ps_4_0, ShadowMapPS() ) );
+        SetPixelShader( NULL );
     }
 }

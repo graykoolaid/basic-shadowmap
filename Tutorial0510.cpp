@@ -514,8 +514,8 @@ HRESULT InitDevice()
 	srvDesc.Texture2D.MostDetailedMip = 0;
 
 	hr = g_pd3dDevice->CreateTexture2D( &descDepth, NULL, &pShadowMap );
-	if( FAILED(hr) )	
-		return false;
+	//if( FAILED(hr) )	
+	//	return false;
 	hr = g_pd3dDevice->CreateDepthStencilView( pShadowMap, &descDSV2, &pShadowMapDepthView );
 	if( FAILED(hr) )	
 		return false;
