@@ -85,9 +85,9 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <GenerateManifest>true</GenerateManifest>
-    <ExecutablePath>C:\Users\Michael\Desktop\NeedtouseGit\Libraries\bin\x86;$(DXSDK_DIR)Utilities\bin\x86;$(ExecutablePath)</ExecutablePath>
-    <IncludePath>C:\Users\Michael\Desktop\NeedtouseGit\Libraries\Include\fbxsdk;C:\Users\Michael\Desktop\NeedtouseGit\Libraries\Include;$(DXSDK_DIR)Include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\Michael\Desktop\NeedtouseGit\Libraries\Lib\x86;$(DXSDK_DIR)Lib\x86;$(LibraryPath)</LibraryPath>
+    <ExecutablePath>..\include\bin\x86\;$(DXSDK_DIR)Utilities\bin\x86;$(ExecutablePath)</ExecutablePath>
+    <IncludePath>..\include\Include\;..\include\Include\fbxsdk\;$(DXSDK_DIR)Include;$(IncludePath)</IncludePath>
+    <LibraryPath>..\include\Lib\x86\;$(DXSDK_DIR)Lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|X64'">
     <LinkIncremental>true</LinkIncremental>
